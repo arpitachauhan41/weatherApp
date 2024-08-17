@@ -1,7 +1,6 @@
 const url = 'https://api.openweathermap.org/data/2.5/weather';
 const apiKey = 'f00c38e0279b7bc85480c3fe775d518c';
 
-
 async function weatherFn(cName) {
     const temp = `${url}?q=${cName}&appid=${apiKey}&units=metric`;
     try {
@@ -9,8 +8,7 @@ async function weatherFn(cName) {
         const data = await res.json();
         if (res.ok) {
             weatherShowFn(data);
-        } 
-        else {
+        } else {
             alert('City not found. Please try again.');
         }
     } 
